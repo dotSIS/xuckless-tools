@@ -4,5 +4,4 @@
     </p>
 </div>
 
-# xuckless-tools
-Suckless tools for Xfce Debian distros.
+# Suckless tools for Xfce Debian distros.
