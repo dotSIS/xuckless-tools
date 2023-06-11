@@ -74,6 +74,9 @@ static const char *stcmd[]  = { "st", NULL };
 static const char *kittycmd[]  = { "kitty", NULL };
 static const char *volup[] = { "/usr/bin/amixer", "set", "Master", "5%+", NULL };
 static const char *voldown[] = { "/usr/bin/amixer", "set", "Master", "5%-", NULL };
+static const char *scrotdef[] = { "/usr/bin/scrot", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
+static const char *scrotfoc[] = { "/usr/bin/scrot", "--focused", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
+static const char *scrotsel[] = { "/usr/bin/scrot", "--select", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,6 +112,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_F4,	   quit,           {0} },
 	{ MODKEY,						XK_F3,	   spawn,		   {.v = volup } },
 	{ MODKEY,						XK_F2,	   spawn,		   {.v = voldown } },
+	{ 0,							XK_Print,  spawn,		   {.v = scrotdef } },
+	{ ShiftMask,					XK_Print,  spawn,		   {.v = scrotfoc } },
+	{ ControlMask|ShiftMask,		XK_Print,  spawn,		   {.v = scrotsel } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
