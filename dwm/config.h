@@ -79,51 +79,51 @@ static const char *scrotfoc[] = { "/usr/bin/scrot", "--focused", "/home/zhy7ne/P
 static const char *scrotsel[] = { "/usr/bin/scrot", "--select", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
-	{ MODKEY,						XK_bracketleft, spawn,     {.v = stcmd } },
-	{ MODKEY,						XK_bracketright, spawn,    {.v = kittycmd } },
-	{ MODKEY,						XK_Return, spawn,          {.v = dmenucmd } },
-	{ MODKEY,						XK_BackSpace, spawn,	   SHCMD("rofi -show drun") },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_g,      togglebar,      {0} },
-	{ MODKEY,                       XK_f,	   zoom,           {0} },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_s,      incnmaster,     {.i = +1 } },
-	{ MODKEY,		        		XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,             XK_r,  	   togglefloating, {0} },
-	{ MODKEY,                       XK_t,  	   setlayout,      {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,						XK_minus,  setgaps,	   	   {.i = -1 } },
-	{ MODKEY,						XK_equal,  setgaps,	       {.i = +1 } },
-	{ MODKEY|ShiftMask,				XK_equal,  setgaps,	       {.i =  0 } },
-	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
-	{ MODKEY|ShiftMask,				XK_F4,	   quit,           {0} },
-	{ MODKEY,						XK_F3,	   spawn,		   {.v = volup } },
-	{ MODKEY,						XK_F2,	   spawn,		   {.v = voldown } },
-	{ 0,							XK_Print,  spawn,		   {.v = scrotdef } },
-	{ ShiftMask,					XK_Print,  spawn,		   {.v = scrotfoc } },
-	{ ControlMask|ShiftMask,		XK_Print,  spawn,		   {.v = scrotsel } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	/* modifier                     key						function					 argument */
+	{ MODKEY,						XK_bracketleft,			spawn,						{.v = stcmd } },
+	{ MODKEY,						XK_bracketright,		spawn,						{.v = kittycmd } },
+	{ MODKEY,						XK_Return,				spawn,						{.v = dmenucmd } },
+	{ MODKEY,						XK_BackSpace,			spawn,						SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_l,					setmfact,					{.f = +0.05} },
+	{ MODKEY,                       XK_k,					focusstack,					{.i = -1 } },
+	{ MODKEY,                       XK_j,					focusstack,					{.i = +1 } },
+	{ MODKEY,                       XK_h,					setmfact,					{.f = -0.05} },
+	{ MODKEY,                       XK_g,					togglebar,					{0} },
+	{ MODKEY,                       XK_f,					zoom,						{0} },
+	{ MODKEY,                       XK_d,					incnmaster,					{.i = -1 } },
+	{ MODKEY,                       XK_s,					incnmaster,					{.i = +1 } },
+	{ MODKEY,		        		XK_q,					killclient,					{0} },
+	{ MODKEY,                       XK_w,					setlayout,					{.v = &layouts[0]} },
+	{ MODKEY,                       XK_e,					setlayout,					{.v = &layouts[1]} },
+	{ MODKEY,                       XK_r,					setlayout,					{.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_r,					togglefloating,				{0} },
+	{ MODKEY,                       XK_t,					setlayout,					{0} },
+	{ MODKEY,                       XK_Tab,					view,						{0} },
+	{ MODKEY,                       XK_0,					view,						{.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,					tag,						{.ui = ~0 } },
+	{ MODKEY,                       XK_comma,				focusmon,					{.i = -1 } },
+	{ MODKEY,                       XK_period,				focusmon,					{.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,				tagmon,						{.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period,				tagmon,						{.i = +1 } },
+	{ MODKEY,						XK_minus,				setgaps,					{.i = -1 } },
+	{ MODKEY,						XK_equal,				setgaps,					{.i = +1 } },
+	{ MODKEY|ShiftMask,				XK_equal,				setgaps,					{.i =  0 } },
+	{ MODKEY,                       XK_F5,					xrdb,						{.v = NULL } },
+	{ MODKEY|ShiftMask,				XK_F4,					quit,						{0} },
+	{ MODKEY,						XK_F3,					spawn,						{.v = volup } },
+	{ MODKEY,						XK_F2,					spawn,						{.v = voldown } },
+	{ 0,							XK_Print,				spawn,						{.v = scrotdef } },
+	{ ShiftMask,					XK_Print,				spawn,						{.v = scrotfoc } },
+	{ ControlMask|ShiftMask,		XK_Print,				spawn,						{.v = scrotsel } },
+	TAGKEYS(                        XK_1,												0)
+	TAGKEYS(                        XK_2,												1)
+	TAGKEYS(                        XK_3,												2)
+	TAGKEYS(                        XK_4,												3)
+	TAGKEYS(                        XK_5,												4)
+	TAGKEYS(                        XK_6,												5)
+	TAGKEYS(                        XK_7,												6)
+	TAGKEYS(                        XK_8,												7)
+	TAGKEYS(                        XK_9,												8)
 };
 
 /* button definitions */
