@@ -112,6 +112,8 @@ static Key keys[] = {
 	{ MODKEY,						XK_minus,				setgaps,					{.i = -1 } },
 	{ MODKEY,						XK_equal,				setgaps,					{.i = +1 } },
 	{ MODKEY|ShiftMask,				XK_equal,				setgaps,					{.i =  0 } },
+	{ 0,             				XK_F10,      			fullscreen,     			{0} },
+	{ MODKEY,             			XK_F10,      			togglefullscr,  			{0} },
 	{ MODKEY,                       XK_F5,					xrdb,						{.v = NULL } },
 	{ MODKEY|ShiftMask,				XK_F4,					quit,						{0} },
 	{ MODKEY,						XK_F3,					spawn,						{.v = volup } },
