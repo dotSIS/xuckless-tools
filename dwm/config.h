@@ -76,6 +76,8 @@ static const char *stcmd[]  = { "st", NULL };
 static const char *kittycmd[]  = { "kitty", NULL };
 static const char *volup[] = { "/usr/bin/amixer", "set", "Master", "5%+", NULL };
 static const char *voldown[] = { "/usr/bin/amixer", "set", "Master", "5%-", NULL };
+static const char *brightup[] = { "/usr/bin/xbacklight", "-inc", "5", NULL };
+static const char *brightdown[] = { "/usr/bin/xbacklight", "-dec", "5", NULL };
 static const char *scrotdef[] = { "/usr/bin/scrot", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 static const char *scrotfoc[] = { "/usr/bin/scrot", "--focused", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 static const char *scrotsel[] = { "/usr/bin/scrot", "--select", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
@@ -114,6 +116,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_equal,				setgaps,					{.i =  0 } },
 	{ 0,             				XK_F10,      			fullscreen,     			{0} },
 	{ MODKEY,             			XK_F10,      			togglefullscr,  			{0} },
+    { MODKEY,                       XK_F7,                  spawn,                      {.v = brightup} },
+    { MODKEY,                       XK_F6,                  spawn,                      {.v = brightdown} },
 	{ MODKEY,                       XK_F5,					xrdb,						{.v = NULL } },
 	{ MODKEY|ShiftMask,				XK_F4,					quit,						{0} },
 	{ MODKEY,						XK_F3,					spawn,						{.v = volup } },
