@@ -67,7 +67,6 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ wifi_essid, 		" |  %s",	"wlan0" },
 	{ battery_perc,		" |  %s%%",	"BAT0" },
-	{ run_command,		" | 󰃟 %s%%",		"xbacklight | cut -f1 -d'.'" },
 	{ run_command,		" |  %s",		"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	{ datetime,			" |  %s",		"%a %b-%d-%G %R" },
 	{ username,			" |  %s ",	NULL }
