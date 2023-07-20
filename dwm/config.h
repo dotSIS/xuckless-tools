@@ -82,6 +82,7 @@ static const char *scrotdef[] = { "/usr/bin/scrot", "/home/zhy7ne/Pictures/Scree
 static const char *scrotfoc[] = { "/usr/bin/scrot", "--focused", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 static const char *scrotsel[] = { "/usr/bin/scrot", "--select", "/home/zhy7ne/Pictures/Screenshots/%Y-%m-%d-%s.jpg", NULL };
 static const char *killer[] = { "/home/zhy7ne/.scripts/.killer.sh", NULL };
+static const char *connect[] = { "/home/zhy7ne/.scripts/.connect.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key						function					 argument */
@@ -89,7 +90,6 @@ static Key keys[] = {
 	{ MODKEY,						XK_bracketright,		spawn,						{.v = kittycmd } },
 	{ MODKEY,						XK_Return,				spawn,						{.v = dmenucmd } },
 	{ MODKEY,						XK_BackSpace,			spawn,						SHCMD("rofi -show drun") },
-    { MODKEY,                       XK_Delete,              spawn,                      {.v = killer } },
 	{ MODKEY,                       XK_l,					setmfact,					{.f = +0.05} },
 	{ MODKEY,                       XK_j,					focusstack,					{.i = -1 } },
 	{ MODKEY,                       XK_k,					focusstack,					{.i = +1 } },
@@ -124,6 +124,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_F4,					quit,						{0} },
 	{ MODKEY,						XK_F3,					spawn,						{.v = volup } },
 	{ MODKEY,						XK_F2,					spawn,						{.v = voldown } },
+    { MODKEY|ShiftMask,             XK_F1,                  spawn,                      {.v = connect } },
+    { MODKEY|ShiftMask,             XK_Delete,              spawn,                      {.v = killer } },
 	{ 0,							XK_Print,				spawn,						{.v = scrotdef } },
 	{ ShiftMask,					XK_Print,				spawn,						{.v = scrotfoc } },
 	{ ControlMask|ShiftMask,		XK_Print,				spawn,						{.v = scrotsel } },
