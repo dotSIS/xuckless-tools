@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # merge xresources
-xrdb merge ~/.Xresources &
+#xrdb merge ~/.Xresources &
 
 # run lxpolkit to manage authorizations on dwm
 lxpolkit &
 
 # set keyboard rate
-xset r rate 200 50 &
+#xset r rate 200 50 &
 
 # run picom compositor in bg
 picom &
