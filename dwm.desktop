@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=DWM
-Comment=Dynamic Window Manager
-Exec=/home/zhy7ne/.dwm/autostart
-Icon=dwm
-Type=XSession
-

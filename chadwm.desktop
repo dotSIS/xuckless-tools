@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=ChaDWM
-Comment=Chad Dynamic Window Manager
-Exec=/home/zhy7ne/Configs/xuckless-tools/chadwm/scripts/./run.sh
-Type=Application
-
