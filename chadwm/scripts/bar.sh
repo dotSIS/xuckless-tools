@@ -10,14 +10,15 @@ interval=0
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b$blue^ 󰤨 ^d^%s" " ^c$blue^Connected" ;;
-	down) printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected" ;;
+	up) printf "^c$blue^ 󰤨 ^d^%s" " ^c$darkblue^Connected" ;;
+	down) printf "^c$blue^ 󰤭 ^d^%s" " ^c$darkblue^Disconnected" ;;
 	esac
 }
 
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
-  printf "^c$blue^  $get_capacity"
+  printf "^c$blue^   "
+  printf "^c$blue^$get_capacity"
 }
 
 brightness() {
@@ -26,25 +27,24 @@ brightness() {
 }
 
 volume() {
-  printf "^c$green^  "
-  printf "^c$green^ $(amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }' | head -n1 | sed 's/%//')"
+  printf "^c$green^   "
+  printf "^c$green^$(amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }' | head -n1 | sed 's/%//')"
 }
 
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
-
   printf "^c$black^ ^b$red^ CPU"
-  printf "^c$white^ ^b$grey^ $cpu_val"
+  printf "^c$red^ ^b$grey^ $cpu_val"
 }
 
 mem() {
-  printf "^c$blue^^b$black^  "
-  printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^c$black^ ^b$blue^ MEM"
+  printf "^c$blue^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 clock() {
 	printf "^c$black^ ^b$darkblue^ 󱑆 "
-	printf "^c$black^^b$blue^ $(date '+ %a %b-%d-%G %R')  "
+	printf "^c$black^ ^b$blue^ $(date '+ %a %b-%d-%G %R')  "
 }
 
 pkg_updates() {
