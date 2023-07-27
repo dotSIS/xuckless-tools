@@ -71,7 +71,7 @@ static const char* eww[] = { "eww", "open" , "eww", NULL };
 
 static const Launcher launchers[] = {
     /* command     name to display */
-    { eww,         "" },
+    { eww,         " |" },
 };
 
 static const int tagschemes[] = {
@@ -110,22 +110,22 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 
 static const Layout layouts[] = {
-    /* symbol     arrange function */
-    { "[]=",      tile },    /* first entry is default */
-    { "[M]",      monocle },
-    { "[@]",      spiral },
-    { "[\\]",     dwindle },
-    { "H[]",      deck },
-    { "TTT",      bstack },
-    { "===",      bstackhoriz },
-    { "HHH",      grid },
-    { "###",      nrowgrid },
-    { "---",      horizgrid },
-    { ":::",      gaplessgrid },
-    { "|M|",      centeredmaster },
-    { ">M>",      centeredfloatingmaster },
-    { "><>",      NULL },    /* no layout function means floating behavior */
-    { NULL,       NULL },
+    /* symbol       arrange function */
+    { "|[]=|",      tile },    /* first entry is default */
+    { "|[M]|",      monocle },
+    { "|[@]|",      spiral },
+    { "|[\]|",      dwindle },
+    { "|H[]|",      deck },
+    { "|TTT|",      bstack },
+    { "|===|",      bstackhoriz },
+    { "|HHH|",      grid },
+    { "|###|",      nrowgrid },
+    { "|---|",      horizgrid },
+    { "|:::|",      gaplessgrid },
+    { "||M||",      centeredmaster },
+    { "|>M>|",      centeredfloatingmaster },
+    { "|><>|",      NULL },    /* no layout function means floating behavior */
+    { NULL,         NULL },
 };
 
 /* key definitions */
