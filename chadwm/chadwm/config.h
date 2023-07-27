@@ -29,11 +29,11 @@ static const int scalepreview       = 4;
 static const int tag_preview        = 0;        /* 1 means enable, 0 is off */
 static const int colorfultag        = 1;        /* 0 means use SchemeSel for selected non vacant tag */
 static const int new_window_attach_on_end = 0; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
-#define ICONSIZE 19   /* icon size */
-#define ICONSPACING 8 /* space between icon and title */
+#define ICONSIZE 15   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
 
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10:antialias=true:autohint=true",
-										"Liberation Mono:size=10:antialias=true:autohint=true" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:pixelsize=10:antialias=true:autohint=true",
+										"Liberation Mono:pixelsize=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
 
 // theme
