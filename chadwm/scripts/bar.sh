@@ -10,8 +10,8 @@ interval=0
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$blue^ 󰤨 ^d^%s" " ^c$darkblue^Connected" ;;
-	down) printf "^c$blue^ 󰤭 ^d^%s" " ^c$darkblue^Disconnected" ;;
+	up) printf "^c$blue^  ^d^%s" " ^c$darkblue^Connected" ;;
+	down) printf "^c$blue^  ^d^%s" " ^c$darkblue^Disconnected" ;;
 	esac
 }
 
