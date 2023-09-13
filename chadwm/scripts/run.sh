@@ -17,6 +17,9 @@ xbacklight -set 10 &
 xset dpms 0 0 0 &
 xset s off &
 
+# set amixer mode to on
+#amixer sset Master toggle &
+
 # run eww status bar in bg
 eww open eww &
 
