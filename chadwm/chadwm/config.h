@@ -144,6 +144,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont};
 static const char *stcmd[]  = { "st", NULL };
 static const char *kittycmd[]  = { "kitty", NULL };
+static const char *voltog[] = { "/usr/bin/amixer", "sset", "Master", "toggle", NULL };
 static const char *volup[] = { "/usr/bin/amixer", "set", "Master", "10%+", NULL };
 static const char *voldown[] = { "/usr/bin/amixer", "set", "Master", "10%-", NULL };
 static const char *brightup[] = { "/usr/bin/xbacklight", "-inc", "10%", NULL };
@@ -162,6 +163,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_F5,                  spawn,                      {.v = brightdown} },
 	{ MODKEY,						XK_F3,					spawn,						{.v = volup } },
 	{ MODKEY,						XK_F2,					spawn,						{.v = voldown } },
+	{ MODKEY,						XK_F1,					spawn,						{.v = voltog } },
     // terminals and launchers
 	{ MODKEY,						XK_bracketleft,			spawn,						{.v = stcmd } },
 	{ MODKEY,						XK_bracketright,		spawn,						{.v = kittycmd } },
