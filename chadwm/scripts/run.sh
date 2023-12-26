@@ -10,7 +10,7 @@ lxpolkit &
 #xset r rate 200 50 &
 
 # run picom compositor in bg
-picom &
+# picom &
 
 # set default brightness and disable screendim
 xbacklight -set 10 &
